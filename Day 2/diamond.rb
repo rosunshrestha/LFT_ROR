@@ -1,7 +1,8 @@
 
-#a=[1,1,1,1,2,3,49,53,6,27,18,1,2]
+a=[1,1,1,1,2,3,49,53,6,27,18,1,2]
 #a=[1,2,3,4,5,6,7,8,12]
-a=[2,2,5]
+#a=[2,2,5]
+flag=1
 sum=a.inject(0) {|sum, element| sum+element}
 if(sum%3==0)
   count=0
@@ -24,15 +25,18 @@ if(sum%3==0)
       count+=1
     else
       count=a.length
+      flag=0
       puts "Cannot distribute equally to 3 peoples"
     end
   end
-  person1=person1.sort
-  person2=person2.sort
-  person3=person3.sort
-  puts "Person1#{person1}"
-  puts "Person2#{person2}"
-  puts "Person3#{person3}"
+  if(flag==1)
+	  person1=person1.sort
+	  person2=person2.sort
+	  person3=person3.sort
+	  puts "Person1#{person1}"
+	  puts "Person2#{person2}"
+	  puts "Person3#{person3}"
+  end
 else
   puts "Cannot distribute equally to 3 peoples"
 end
