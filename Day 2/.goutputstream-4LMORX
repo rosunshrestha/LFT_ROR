@@ -1,0 +1,28 @@
+
+a=[5,4,12,36,48,12,48,12]
+sum=a.inject(0) {|sum, element| sum+element}
+if(sum%3==0)
+	count=0;
+	person1, person2, person3 = [], [], []
+	person1_total, person2_total, person3_total = 0, 0, 0
+	allocated=sum/3
+	b=a.sort.reverse
+	while(count!=a.length)
+		if((person3_total+b[count])<allocated)
+			person3.push(b[count])
+			person3_total+=b[count]
+			count++		
+		#elsif((person2_total+b[count])<allocated)
+			person2.push(b[count])
+			person2_total+=b[count]
+			count++
+		#elsif((person1_total+b[count])<allocated)
+			person1.push(b[count])
+			person1_total+=b[count]
+			count++
+		end
+	end
+	puts person1
+else
+	puts "Cannot distribute equally to 3 peoples"
+end
