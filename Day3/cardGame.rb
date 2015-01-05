@@ -1,3 +1,4 @@
+#class for the players
 class Player
 
 	attr_accessor :player_cards, :power
@@ -22,6 +23,7 @@ class Player
 	
 end
 
+#class for the deck
 class Deck
 
 	attr_accessor :cardArray
@@ -48,13 +50,12 @@ class Deck
 			cardArray[i].suit =
 			current_suit
 			cardArray[i].number = ((i)%13+1)
-		  #cardArray[i].to_s
-		
 		end
 	end
 
 end
 
+#class for the card
 class Card
 
     attr_accessor :suit, :number
@@ -65,7 +66,7 @@ class Card
 
 end
 
-
+#class for the rule
 class Rule
   attr_accessor :cards
 
