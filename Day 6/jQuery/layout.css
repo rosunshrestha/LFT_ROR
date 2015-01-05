@@ -1,0 +1,10 @@
+.container
+{
+	height:80px;
+	width:80px;
+	border:1px solid black;
+	float:left;
+	color:red;
+	margin-left:10px;
+	cursor:pointer;
+}
